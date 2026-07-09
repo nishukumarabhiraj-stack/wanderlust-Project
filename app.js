@@ -62,7 +62,7 @@ const store=MongoStore.create({
     touchAfter:24*3600,
 });
 
-store.on("error",()=>{
+store.on("error",(err)=>{
     console.log("Error in MONGO session STORE",err);
 });
 
@@ -102,7 +102,7 @@ app.use((req,res,next)=>{
     res.locals.error = req.flash("error");
     res.locals.currUser = req.user;
     next();
-})
+});
 
 
 // app.get("/demouser",async(req,res)=>{
