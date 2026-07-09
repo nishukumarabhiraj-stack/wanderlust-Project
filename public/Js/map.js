@@ -10,7 +10,7 @@
         ).addTo(map);
         //marker add karein
         L.marker([coordinates[1],coordinates[0]]).addTo(map)
-        .bindPopup('<h3>${listing.title}</h3><p>Location: ${listing.location}</p><p>Exact location will be provided after booking</p>')
+        .bindPopup(`<h3>${listing.title}</h3><p>Location: ${listing.location}</p><p>Exact location will be provided after booking</p>`)
         .openPopup();
     
 
